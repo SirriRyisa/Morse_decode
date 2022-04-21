@@ -51,12 +51,9 @@ def decode_words(word)
   letters.map { |letter| decode_char(letter) }.join
 end
 
-p decode_words('.-. -.-- ..')
-
 def decode_message(message)
   words = message.split('   ')
   words.map { |word| decode_words(word) }.join(' ')
 end
 
-p decode_message('.-. -.-- ..   .-. -.-- ..')
 
