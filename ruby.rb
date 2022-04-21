@@ -42,7 +42,7 @@ const MORSE_NAME = {
 # Getting characters
 
 def decode_char(letter)
-  MORSE_NAME[letter]
+  MORSE_NAME[letter].freeze
 end
 
 # Getting words from the characters
@@ -57,4 +57,3 @@ def decode_message(message)
   words.map { |word| decode_words(word) }.join(' ')
 end
 
-MORSE_NAME.freeze
