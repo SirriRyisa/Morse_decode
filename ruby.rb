@@ -1,6 +1,6 @@
 # Decoding the symbols into letters
 
-const MORSE_NAME = {
+MORSE_NAME = {
   '.-' => 'A',
   '-...' => 'B',
   '-.-.' => 'C',
@@ -37,12 +37,12 @@ const MORSE_NAME = {
   '--...' => '7',
   '---..' => '8',
   '----.' => '9'
-}
+}.freeze
 
 # Getting characters
 
 def decode_char(letter)
-  MORSE_NAME[letter].freeze
+  MORSE_NAME[letter]
 end
 
 # Getting words from the characters
@@ -56,4 +56,3 @@ def decode_message(message)
   words = message.split('   ')
   words.map { |word| decode_words(word) }.join(' ')
 end
-
