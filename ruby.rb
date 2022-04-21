@@ -1,5 +1,5 @@
 # Decoding the symbols into letters
-MORSE_NAME = {
+@MORSE_NAME = {
   '.-' => 'A',
   '-...' => 'B',
   '-.-.' => 'C',
@@ -41,7 +41,7 @@ MORSE_NAME = {
 # Getting characters
 
 def decode_char(letter)
-  MORSE_NAME[letter]
+  @MORSE_NAME[letter]
 end
 
 # Getting words from the characters
