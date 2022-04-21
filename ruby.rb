@@ -56,3 +56,5 @@ def decode_message(message)
   words = message.split('   ')
   words.map { |word| decode_words(word) }.join(' ')
 end
+
+MORSE_NAME.freeze
