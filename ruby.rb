@@ -1,5 +1,5 @@
 # Decoding the symbols into letters
-Morse_name = {
+MORSE_NAME = {
   '.-' => 'A',
   '-...' => 'B',
   '-.-.' => 'C',
@@ -38,13 +38,13 @@ Morse_name = {
   '----.' => '9'
 }
 
-#Getting characters
+# Getting characters
 
 def decode_char(letter)
-  Morse_name[letter]
+  MORSE_NAME[letter]
 end
 
-#Getting words from the characters
+# Getting words from the characters
 
 def decode_words(word)
   letters = word.split
@@ -55,5 +55,3 @@ def decode_message(message)
   words = message.split('   ')
   words.map { |word| decode_words(word) }.join(' ')
 end
-
-
